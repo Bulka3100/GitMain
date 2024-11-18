@@ -12,5 +12,4 @@ fun main() {
     print(hour.toString())
     print(":")
     print(minute.toString())
-
 }
