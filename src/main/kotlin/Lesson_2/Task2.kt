@@ -9,6 +9,7 @@ fun main() {
         val constWorkersSalary: Int = commonWorkers*commonWorkersSalary
         val commonSalary = constWorkersSalary+traineeWorkersSalary*traineeWorkers
         val meanSalary = commonSalary/(commonWorkers+traineeWorkers)
+
         println(constWorkersSalary)
         println(commonSalary)
         println(meanSalary)
