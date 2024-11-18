@@ -7,8 +7,6 @@ fun main() {
     var hours: Int = quantityOfSeconds / 60 / 60
     var seconds: Int = quantityOfSeconds - minutes * 60 - hours * 3600
 
-
-
     println("0$hours:$minutes:0$seconds")
 
 }
