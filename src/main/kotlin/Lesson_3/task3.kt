@@ -1,6 +1,7 @@
 package org.example.Lesson_3
 
-fun main(){
+fun main() {
+
     val nubmer = 3
     println("""
       |$nubmer*1=${nubmer*1}
@@ -12,8 +13,6 @@ fun main(){
       |$nubmer*7=${nubmer*7}
       |$nubmer*8=${nubmer*8}
       |$nubmer*9=${nubmer*9}
-      
-        
   """.trimMargin()  )
 
 }
