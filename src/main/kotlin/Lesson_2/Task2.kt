@@ -1,6 +1,7 @@
 package org.example.Lesson_2
 
 fun main() {
+
         val commonWorkers = 50
         val commonWorkersSalary = 30_000
         val traineeWorkers = 30
