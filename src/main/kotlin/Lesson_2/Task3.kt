@@ -7,8 +7,7 @@ fun main() {
     val arrivalTimeMinutes = startTime + TRAVEL_TIME
     val arrivalTimeHours = arrivalTimeMinutes / SECONDS_IN_MINUTE
     val arrivalTimeMinutesLeft = arrivalTimeMinutes % SECONDS_IN_MINUTE
-    val arrivalTime: String =
-        ("${String.format("%02d", arrivalTimeHours)}:${String.format("%02d", arrivalTimeMinutesLeft)}")
+    val arrivalTime: String = ("${String.format("%02d", arrivalTimeHours)}:${String.format("%02d", arrivalTimeMinutesLeft)}")
     println(arrivalTime)
 }
 
