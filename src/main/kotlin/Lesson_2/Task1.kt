@@ -5,7 +5,8 @@ fun main() {
     val student2 = 4.0
     val student3 = 3.0
     val student4 = 5.0
-    val mean: Double = (student1+student2+student3+student4)/ NumberOfStudents
+    val mean: Double = (student1 + student2 + student3 + student4) / NUMBER0FSTUDENTS
     println(mean)
 }
-const val NumberOfStudents = 4
+
+const val NUMBER0FSTUDENTS = 4
