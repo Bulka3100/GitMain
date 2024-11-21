@@ -7,4 +7,4 @@ fun main() {
 }
 
 const val CURRENT_YEAR: Short = 2024
-const val IS_ADULT: Int = 18
+const val IS_ADULT: Byte = 18
