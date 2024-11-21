@@ -4,8 +4,8 @@ fun main() {
     println("угадай число от 1 до 42")
     val firstRight: Int = 4
     val secondRight: Int = 22
-    val input1 = readln().toInt()
-    val input2 = readlnOrNull()!!.toInt()
+    val input1 = readlnOrNull()?.toInt()
+    val input2 = readlnOrNull()?.toInt()
     var choosed: Int = 0
     when (input1) {
         4 -> choosed++
