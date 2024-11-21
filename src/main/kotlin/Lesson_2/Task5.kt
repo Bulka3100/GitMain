@@ -9,4 +9,5 @@ fun main() {
     val result = (summ * ((1 + procent / 100).pow(time))).toDouble()
     val formatResult = Math.round(result * 1000.0) / 1000.0
     println(formatResult)
+
 }
