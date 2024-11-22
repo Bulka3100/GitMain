@@ -9,5 +9,4 @@ fun main() {
     to = "D3"
     actionNumber++
     println("$from-$to;$actionNumber")
-
 }
