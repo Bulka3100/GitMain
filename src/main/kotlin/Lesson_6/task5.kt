@@ -4,7 +4,6 @@ import kotlin.random.Random
 
 fun main() {
     println("создайте пароль и логин")
-    var iaAutorizred = false
     val pasword = readLine()
     val randomNumber1 = Random.nextInt(0, 10)
     val randomNumber2 = Random.nextInt(0, 10)
