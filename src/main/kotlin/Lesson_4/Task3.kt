@@ -5,5 +5,6 @@ fun main() {
     val tentIsOpened: Boolean = true
     val airWet: Int = 20
     val currentTimeOfTheYear: String = "Winter"
-    println("Благоприятные ли условия сейчас для роста бобовых? ${weatherTodaySunny == true && tentIsOpened == true && airWet == 20 && currentTimeOfTheYear != "Winter"}")
+    val message = "Благоприятные ли условия сейчас для роста бобовых?"
+    println("$message ${weatherTodaySunny == true && tentIsOpened == true && airWet == airWet && currentTimeOfTheYear != "Winter"}")
 }
