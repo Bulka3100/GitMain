@@ -14,9 +14,9 @@ fun main() {
         println("решите пример $randomNumber1+$randomNumber2")
         var result = randomNumber1 + randomNumber2
         do {
-           val res = readlnOrNull()?.toInt()
+            val res = readlnOrNull()?.toInt()
             counter--
-        }while (counter>0 && result!=res)
+        } while (counter > 0 && result != res)
 //        if (passwordEnter != pasword) println("неверная авторизация") else continue
 
     } while (passwordEnter != pasword)
