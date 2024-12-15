@@ -13,6 +13,7 @@ fun main() {
 
         val client1 = Client(name,correctNumber,companyName)
         сlientlist.add(client1)
+        client1.showInfo()
     } else println("вы не ввели номер")
 
 
