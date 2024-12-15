@@ -27,7 +27,7 @@ fun main() {
         company = null
     )
     val companiesList = listOf<Client>(client1, client2, client3, client4, client5)
-    val companies = companiesList.map{ it.company?.ifEmpty { "null компания" } }
+    val companies = companiesList.mapNotNull{ it.company }
     println(companies)
 }
 
