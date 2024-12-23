@@ -2,10 +2,10 @@ package org.example.Lesson_5
 
 fun main() {
 
-    val a = 2
-    val b = 3
-    println("решите пример: $a+$b")
+    val firstValue = 2
+    val secondValue = 3
+    println("решите пример: $firstValue+$secondValue")
     val identificator = readlnOrNull()?.toInt()
-    if (identificator == a + b) println("Добро пожаловать") else println("доступ запрещен")
+    if (identificator == firstValue + secondValue) println("Добро пожаловать") else println("доступ запрещен")
 
 }
