@@ -10,6 +10,7 @@ fun main() {
     loteryListOf.add(first)
     loteryListOf.add(second)
     loteryListOf.add(third)
+
     println("введи первое число")
     val inputFirst = readln().toInt()
     println("введи второе число")
