@@ -7,6 +7,7 @@ fun main() {
     val second = Random.nextInt(0, 43)
     val third = Random.nextInt(0, 43)
     val loteryListOf = mutableListOf<Int>()
+
     loteryListOf.add(first)
     loteryListOf.add(second)
     loteryListOf.add(third)
