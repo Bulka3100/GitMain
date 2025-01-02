@@ -12,7 +12,6 @@ open class SkyObjects(
     val isAutmosphere: Boolean,
     val isSafeForLanding: Boolean
 )
-
 class Planet(
     val name: String,
     isAutmosphere: Boolean,
