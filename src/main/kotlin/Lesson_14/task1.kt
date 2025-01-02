@@ -1,31 +1,22 @@
 package org.example.Lesson_14
 
 fun main() {
-    val liner = Liner(name = "Лайнер")
-    val load = Load(name = "грузовой", loadCapacity = 220) //почему в итоге speed=220? как оставить некоторые параметры родительского а некоторые переопределить правильно?
-    val iceBreaker = IceBreaker(name = "ледокол")
 
-    println(liner.name)
-    println(liner.speed)
-    println(liner.loadCapacity)
-    liner.runSystemDiagnostic()
-    println()
+    val liner = Liner()
+    val load = Load() //я хочтел изменять только некоторые свойства класса чтобы остальные передовались по дефолту из родителя
+    val iceBreaker = IceBreaker()
     println(load.name)
     println(load.speed)
     println(load.loadCapacity)
-    load.runSystemDiagnostic()
-    println()
-    println(iceBreaker.name)
+    println(iceBreaker.iceBreak())
+    println(iceBreaker.runSystemDiagnostic())
     println(iceBreaker.speed)
-    println(iceBreaker.loadCapacity)
-    println()
-    println(load.speed)
+    println(load.runSystemDiagnostic()) //почему выдает kotlinUnit?
 
 }
 
-
 open class Liner(
-    val name: String = "d",
+    val name: String = "liner",
     val speed: Int = 100,
     val loadCapacity: Int = 120,
     val personCapacity: Int = 10,
@@ -36,28 +27,18 @@ open class Liner(
 }
 
 class Load(
-    name: String,
-    loadCapacity: Int,
-
-
-    ) : Liner(name, loadCapacity) {
-    override fun runSystemDiagnostic() {
-        super.runSystemDiagnostic()
-        println("$name: проверено состояние грузовых отсеков")
-    }
-
-    fun weightCheck() {
-        println("$name: проверено состояние груза")
-    }
-}
+    name: String = "грузовой",
+    speed: Int = 80,
+    loadCapacity: Int = 120,
+) : Liner(name, speed = speed, loadCapacity = loadCapacity)
+// почему при добавлении логики в init все ломается?
 
 class IceBreaker(
-    name: String,
+    name: String = "ледокол",
     speed: Int = 70,
-    loadCapacity: Int = 100,
-    personCapacity: Int = 6,
-) : Liner(name, speed, loadCapacity, personCapacity) {
-    fun breakIce() {
-        println("лёд расколот")
+    loadCapacity: Int = 40,
+) : Liner(name, speed = speed, loadCapacity = loadCapacity) {
+    fun iceBreak() {
+        println("лед расколот")
     }
 }
