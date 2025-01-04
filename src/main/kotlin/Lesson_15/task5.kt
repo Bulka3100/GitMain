@@ -14,8 +14,6 @@ fun main() {
     lightCar.MinusPassenger()
     lightCar.loadPassengers()
     println("осталось перевезти $passengersToMove человек и $cargoToMove тонн(ы) груза")
-
-
 }
 
 var passengersToMove: Int = 6
