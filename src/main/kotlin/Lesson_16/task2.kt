@@ -4,7 +4,6 @@ fun main() {
     val circle = Circle(4)
     println(Circle(2).calcP())
     println(circle.calcS())
-
 }
 
 class Circle(
