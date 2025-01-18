@@ -28,3 +28,4 @@ class Cube(
         return 6*edgeLength*edgeLength
     }
 }
+//не уверен что это полиморфизм
