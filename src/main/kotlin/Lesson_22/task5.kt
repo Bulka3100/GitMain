@@ -10,6 +10,7 @@ fun main() {
     println(description)
     println(time)
     println(long)
+    // если только о месте то можно использовать _
 }
 
 data class GalacticGuide(
