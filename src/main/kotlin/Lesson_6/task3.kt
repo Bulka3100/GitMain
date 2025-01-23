@@ -4,10 +4,9 @@ fun main() {
 
     println("сколько секунд засечь?")
     var seconds = readlnOrNull()!!.toInt()
-
-    do {
-        println("остаось секунд ${seconds--}")
+    while (seconds > 0) {
+        println("осталось секунд ${seconds--}")
         Thread.sleep(1000)
-    } while (seconds > 0)
+    }
     println("время вышло!")
 }
