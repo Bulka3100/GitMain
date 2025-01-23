@@ -5,13 +5,8 @@ import kotlin.concurrent.thread
 fun main() {
 
     println("сколько секунд засечь?")
-    var seconds = readlnOrNull()!!.toInt()
-    var initialSeconds = seconds
-
-    do {
-        println(seconds--)
-        Thread.sleep(1000)
-    } while (seconds > 0)
-    println("прошло $initialSeconds секунд(ы)")
+    var seconds = readln().toLong()
+    Thread.sleep(1000L * seconds)
+    println("прошло $seconds секунд(ы)")
 
 }
