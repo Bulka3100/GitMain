@@ -8,5 +8,4 @@ fun main() {
     var seconds = readln().toLong()
     Thread.sleep(1000L * seconds)
     println("прошло $seconds секунд(ы)")
-
 }
