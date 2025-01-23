@@ -1,24 +1,24 @@
 package org.example.Lesson_7
 
 fun main() {
-    var password = ""
-    val rangeInt = 1..9
+    println("Enter Quantity of symbols")
+    val enterNumberOfSymbols = readln().toInt()
+    var password = mutableListOf<Char>()
+    val rangeInt = '1'..'9'
     val rangeChar = 'a'..'z'
     val rangeCharUpper = 'A'..'Z'
-    var x: Int // не знал как вынести нужную переменную за пределы цикла поэьому создал отдельную и записал в нее значения из цикла
+    password.add(rangeInt.random()) // через add () можно только по спискам проходится, поэтому изменил подход
+    password.add(rangeChar.random())
+    password.add(rangeCharUpper.random())
+
     val operations = listOf(
-        { password += rangeInt.random() },
-        { password += rangeCharUpper.random() },
-        { password += rangeChar.random() }
-    )
-    do {
-        println("Enter Quantity of symbols")
-        val enterNumberOfSymbols = readlnOrNull()!!.toInt()
+        { password.add(rangeInt.random().toChar()) },
+        { password.add(rangeCharUpper.random()) },
+        { password.add(rangeChar.random()) }
+    ) //избавился от бесполезного кода
         if (enterNumberOfSymbols < 6) println("пароль должен быть длиннее 6и символов")
-        x = enterNumberOfSymbols
-    } while (enterNumberOfSymbols < 6)
-    for (i in 1..x) {
+    for (i in 1..enterNumberOfSymbols - 3) {
         operations.random().invoke()
     }
-    println(password)
+    println(password.joinToString(""))
 }
