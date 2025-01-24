@@ -8,7 +8,6 @@ fun main() {
     do {
         val passwordEnter = readLine()
         if (passwordEnter != pasword) println("неверная авторизация")
-        continue
     } while (passwordEnter != pasword)
     println("авторизация успешна")
 
