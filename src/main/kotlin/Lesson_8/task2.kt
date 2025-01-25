@@ -4,7 +4,7 @@ fun main() {
     val listOfIngredients = arrayOf("egg", "rice", "milk")
     val ingredient = readlnOrNull()
     for (i in listOfIngredients) {
-        if (i == ingredient) println("есть в списке") else "нет в списке"
-
+        if (i == ingredient) println("есть в списке") else println("нет в списке")
+        break
     }
 }
