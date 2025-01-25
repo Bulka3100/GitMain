@@ -10,9 +10,7 @@ fun main() {
         arrayOfIngredients = arrayOfIngredients.filterNot { it == change }.toTypedArray()
         arrayOfIngredients += changeOn
         println(arrayOfIngredients.joinToString())
-    }
-    else if(change !in arrayOfIngredients){
+    } else if (change !in arrayOfIngredients) {
         println("нет такого в списке")
-    }
-    else println("ошибка")
+    } else println("ошибка")
 }
