@@ -16,5 +16,4 @@ fun throwBone(): Int {
     val randomThrow = dust.random()
     return randomThrow
 }
-//есть ли лучше варианты создать рандом
 
