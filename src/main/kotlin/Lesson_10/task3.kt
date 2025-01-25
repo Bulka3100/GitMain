@@ -1,8 +1,8 @@
 package org.example.Lesson_10
 
 fun main() {
-val a =generetePass(90)
-    println(a)
+    val password = generetePass(9)
+    println(password)
 }
 
 fun generetePass(numberOfSymbols: Int): String {
@@ -19,6 +19,6 @@ fun addInt(): String {
 }
 
 fun addSymbol(): String {
-    val special = listOf<String>("!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "")
+    val special = listOf<String>("!", "\\", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", " ")
     return special.random()
 }
