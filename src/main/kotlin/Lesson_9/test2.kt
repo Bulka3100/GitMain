@@ -7,7 +7,6 @@ fun main() {
     val chosen = readln()
     if (chosen.equals("нет", ignoreCase = true)) {
 
-    } else if (chosen.equals("да", ignoreCase = true)) {
         println("какой ингридиент добавить?")
         val ingredientNew = readln()
         ingredients.add(ingredientNew)
