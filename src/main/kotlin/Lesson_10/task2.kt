@@ -13,7 +13,8 @@ fun get(): String {
     var loginOr: String
     do {
         loginOr = readln()
-        if (loginOr.length < 4) println("меньше 4х символов")
-    } while (loginOr.length < 4)
+        if (loginOr.length < MAX_SYMBOLS) println("меньше ${MAX_SYMBOLS}х символов")
+    } while (loginOr.length < MAX_SYMBOLS)
     return loginOr
 }
+const val MAX_SYMBOLS = 4
