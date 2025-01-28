@@ -4,9 +4,9 @@ fun main() {
     val ingredients = listOf<String>("Яица", "молоко", "сливочное масло")
     val quantityOfIngredients = listOf<Int>(2, 50, 15)
     println("сколько порций?")
-    val choice = readlnOrNull()!!.toInt()
+    val choice = readln().toInt()
     println("на $choice порций нужно")
-    for ((i, ingredient) in ingredients.withIndex()) {
-        println("$ingredient-${quantityOfIngredients[i] * choice}")
-    }
+    val newCollection = quantityOfIngredients.map { it * choice }.zip(ingredients) { a, b -> "$a-$b" }
+    for (i in newCollection) println(i)
+
 }
