@@ -2,20 +2,20 @@ package org.example.Lesson_10
 
 fun main() {
     println(goRound())
-    do{
+    do {
         println("хотите бросить кости еще раз?")
-        val question= readln()
-        if (question.equals("да", ignoreCase = true)) println(goRound())
-        else if (question.equals("нет", ignoreCase = true)) println("количество побед:winCounter как сюда вернуть")
+        val question = readln()
+        if (question.equals("да", ignoreCase = true)){ println(goRound())}
+        else if (question.equals("нет", ignoreCase = true)){ println("количество побед:winCounter как сюда вернуть")}
         else println("нет такого варианта")
-    }while(question.equals("да", ignoreCase = true))
+    } while (question.equals("да", ignoreCase = true))
 
 }
 
 fun throwDust(): Int {
-    val dust = 1..6
+    val dust = USUAL_DUST_FIRST..USUAL_DUST_LAST
     val result = dust.random()
-    println(result) //нормально что в функции и println и return
+    println(result)
     return result
 }
 
@@ -29,3 +29,5 @@ fun goRound(): String {
         winCounter += 1
     } else return ("ничья")
 }
+const val USUAL_DUST_FIRST = 1
+const val USUAL_DUST_LAST = 6
