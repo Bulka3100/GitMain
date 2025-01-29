@@ -17,7 +17,6 @@ fun addInt(): String {
     val arrayInt = 0..9
     return arrayInt.random().toString()
 }
-
 fun addSymbol(): String {
     val special = listOf<String>("!", "\\", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", " ")
     return special.random()
