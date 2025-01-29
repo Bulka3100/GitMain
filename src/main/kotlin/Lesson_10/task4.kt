@@ -9,7 +9,6 @@ fun main() {
         else if (question.equals("нет", ignoreCase = true)){ println("количество побед:winCounter как сюда вернуть")}
         else println("нет такого варианта")
     } while (question.equals("да", ignoreCase = true))
-
 }
 
 fun throwDust(): Int {
