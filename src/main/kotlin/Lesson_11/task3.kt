@@ -17,8 +17,8 @@ fun main(){
     println(user2.currentStatus)
     room1.addMember(user1)
     room1.addMember(user2)
-    println(room1.listOfMembers)
-    room1.changeStatus(user1,1)
+    room1.listOfMembers.forEach{println(it.avatar)}
+    room1.changeStatus("lol",1)
     println(user1.currentStatus)
 
 }
@@ -26,7 +26,6 @@ fun main(){
 
 class User(
     val nickName: String,
-    val statusForms: List<String> = listOf<String>("разговаривает","микрофон выключен","пользователь заглушен"),
     val avatar: String="default.png",
     var currentStatus: String = "разговаривает",
 
@@ -39,11 +38,23 @@ class Room(
     fun addMember(user: User){
         listOfMembers.add(user)
     }
-    fun changeStatus(user: User, statusIndex: Int){
-        user.currentStatus = user.statusForms[statusIndex]
-        println("статус ${user.nickName} обнавлён на ${user.statusForms[statusIndex]}")
+    fun changeStatus(name: String, statusIndex: Int){
+        val member = listOfMembers.find{ it.nickName == name } ?: return
+        getStatus(member, statusIndex)
+        println("статус ${member.nickName}изменен")
+
+
 
     }
+}
+fun getStatus(user: User,index:Int){
+    var newStatus =""
+    when(index){
+        0-> newStatus = "разговаривает"
+        1->newStatus = "микрофон выключен"
+        else -> newStatus ="заглушен"
+    }
+    user.currentStatus = newStatus
 }
 
 
