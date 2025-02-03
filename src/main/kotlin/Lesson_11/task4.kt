@@ -3,6 +3,7 @@ package org.example.Lesson_11
 
 fun main() {
 
+
 }
 
 class Recipe(
@@ -10,7 +11,8 @@ class Recipe(
     val id: Int,
     var inFavorites: Boolean = false,
     val recipePhoto: String = "default.png",
-    val description: String = ""
+    val description: String = "",
+    val ingredientList: List<Ingredient> =mutableListOf<Ingredient>()
 ) {
     fun addToFavorites() {
         inFavorites = true
@@ -19,9 +21,19 @@ class Recipe(
 
 
 class RecipeCategory(
-    val categoryName: List<String> = listOf<String>("Бургеры", "Десерты", "Пицца", "Рыба"),
-    val categoryPhoto: String = "default.png"
-)
+    var currentCategory : String= "Бургеры",
+    val categoryPhoto: String = "default.png",
+    val listOfRecipe: List<Recipe> = mutableListOf<Recipe>(),
+){
+    fun changeCurrent(categoryVariety: CategoryVariety){
+        when(categoryVariety){
+            CategoryVariety.BURGERS -> currentCategory = "Бургеры"
+            CategoryVariety.DESERT -> currentCategory = "Десерты"
+            CategoryVariety.PIZZA -> currentCategory = "Пица"
+            CategoryVariety.FISH -> currentCategory = "Рыба"
+        }
+    }
+}
 
 class Ingredient(
     val ingId: Int,
@@ -32,4 +44,10 @@ class Ingredient(
 fun forPortions(numberOfPortions: Int, ingQuantity: Int): Int {
     val result = numberOfPortions * ingQuantity
     return result
+}
+enum class CategoryVariety{
+    BURGERS,
+    DESERT,
+    PIZZA,
+    FISH,
 }
