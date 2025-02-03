@@ -16,8 +16,10 @@ fun generetePass(numberOfSymbols: Int): String {
 fun addInt(): String {
     val arrayInt = 0..9
     return arrayInt.random().toString()
+
 }
-fun addSymbol(): String {
-    val special = listOf<String>("!", "\\", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", " ")
+
+fun addSymbol(): Char {
+    val special = (' '..'/').toList()
     return special.random()
 }
