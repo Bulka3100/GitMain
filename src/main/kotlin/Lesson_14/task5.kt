@@ -1,7 +1,5 @@
 package org.example.Lesson_14
 
-
-import com.sun.swing.internal.plaf.metal.resources.metal
 import kotlin.random.Random
 import kotlin.random.nextInt
 
@@ -38,14 +36,13 @@ open class Chat(
 
 }
 
-
 open class Message(
     val id: Int,
     val text: String,
     val userName: String,
 ) {
     override fun toString(): String {
-        return "[$id] $userName: $text" //этих частей не понял, но без них выдавались сообщения в виде хэшкодов
+        return "[$id] $userName: $text"
     }
 }
 
