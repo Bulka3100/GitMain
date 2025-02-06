@@ -11,7 +11,6 @@ class User(
 ) {
     fun validation(input: String): Boolean {
         if (input == password) {
-            println("верно")
             return true
         } else return false
     }
