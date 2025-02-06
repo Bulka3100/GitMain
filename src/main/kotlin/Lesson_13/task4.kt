@@ -5,11 +5,11 @@ fun main() {
     println("введите номер телефона")
     val phoneNumber = readln().toLongOrNull()
     if (phoneNumber != null) {
-        val correctNumber = phoneNumber // почему тип long? по умолчанию если я ввел проверку что это не нулл
+        val correctNumber = phoneNumber
         println("введите название компании ")
         val companyName: String? = readln()
         println("введите имя")
-        val name: String = readln() //можно самому проставить что readln возвращает ?
+        val name: String = readln()
 
         val client1 = Client(name,correctNumber,companyName)
         сlientlist.add(client1)
