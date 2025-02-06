@@ -18,8 +18,5 @@ class Circle(
     }
 }
 
-const val P = 3.14
+private const val P = 3.14
 
-/*fun calcS(radius: Int): Double {
-return P * radius * radius А если я так пишу то получается когда я передаю в функцию хначение радиуса он меняется в самом конструкторе? А как тае если он val? Ошибку не выдвет
-}*/
