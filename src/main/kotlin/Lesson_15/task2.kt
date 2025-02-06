@@ -1,7 +1,5 @@
 package org.example.Lesson_15
 
-import sun.awt.www.content.audio.wav
-
 fun main() {
     val temp = Temperature(12.5)
     val preci = PrecipitationAmount(43.4)
@@ -11,10 +9,7 @@ fun main() {
 }
 
 abstract class WeatherStationStats(
-
-) {
-
-}
+)
 
 class Temperature(
     val temp: Double
