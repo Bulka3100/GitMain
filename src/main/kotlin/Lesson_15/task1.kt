@@ -4,29 +4,47 @@ fun main() {
     val seagull = Seagull()
     val fish = Fish()
     val duck = Duck()
-    seagull.toMove()
-    duck.toMove()
-    fish.toMove()
+    seagull.toFly()
+    duck.toSwim()
+    duck.toFly()
+    fish.toSwim()
 }
 
-class Fish() : Movable {
-    override fun toMove() {
+class Fish() : Swim {
+    override fun toSwim() {
+        println("Рыба:")
+        super.toSwim()
+    }
+}
+
+class Duck() : Swim, Fly {
+    override fun toFly() {
+        println("Утка:")
+        super.toFly()
+    }
+
+    override fun toSwim() {
+        println("Утка:")
+        super.toSwim()
+    }
+}
+
+class Seagull() : Fly {
+    override fun toFly() {
+        println("Чайка:")
+        super.toFly()
+    }
+}
+
+
+interface Fly {
+    fun toFly() {
+        println("летает")
+    }
+}
+
+interface Swim {
+    fun toSwim() {
         println("плывёт")
     }
-}
-
-class Duck() : Movable {
-    override fun toMove() {
-        println("плывёт и ходит")
-    }
-}
-
-class Seagull() : Movable {
-    override fun toMove() {
-        println("ходит")
-    }
-}
-
-interface Movable {
-    fun toMove()
 }
