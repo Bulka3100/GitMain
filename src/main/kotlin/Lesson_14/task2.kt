@@ -34,18 +34,18 @@ class Loader(
     name: String = "грузовой",
     speed: Int = 80,
     loadCapacity: Int = 120,
-) : Basic(name, speed = speed, loadCapacity = loadCapacity) {
+) : Basic(name, speed, loadCapacity) {
     override fun toLoad() {
         println("$name: активировать погрузочный кран")
     }
 }
-// почему при добавлении логики в init все ломается?
+
 
 class IceBreak(
     name: String = "ледокол",
     speed: Int = 70,
     loadCapacity: Int = 40,
-) : Basic(name, speed = speed, loadCapacity = loadCapacity) {
+) : Basic(name, speed, loadCapacity) {
     fun iceBreak() {
         println("лед расколот")
     }
