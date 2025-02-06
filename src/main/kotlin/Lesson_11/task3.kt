@@ -40,21 +40,22 @@ class Room(
     }
     fun changeStatus(name: String, statusIndex: Int){
         val member = listOfMembers.find{ it.nickName == name } ?: return
-        getStatus(member, statusIndex)
+        setStatus(member, statusIndex)
         println("статус ${member.nickName}изменен")
 
 
 
     }
 }
-fun getStatus(user: User,index:Int){
-    var newStatus =""
-    when(index){
-        0-> newStatus = "разговаривает"
-        1->newStatus = "микрофон выключен"
-        else -> newStatus ="заглушен"
+
+    fun setStatus(user: User, index: Int) {
+        var newStatus = when (index) {
+            0 -> "разговаривает"
+            1 -> "микрофон выключен"
+            else -> "заглушен"
+        }
+        user.currentStatus = newStatus
     }
-    user.currentStatus = newStatus
-}
+
 
 
