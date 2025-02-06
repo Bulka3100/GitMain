@@ -6,10 +6,19 @@ import kotlin.random.nextInt
 fun main() {
     val greetingChat = Chat()
     greetingChat.addMessage("Hi", "Daniel")
-    greetingChat.addThreadMessage(greetingChat.messageList.last().id, "Sara", "How are you?") //подсмотрел что так можно сам не понял как
+    greetingChat.addThreadMessage(
+        greetingChat.messageList.last().id,
+        "Sara",
+        "How are you?"
+    ) //подсмотрел что так можно сам не понял как
     greetingChat.printChat()
     println(greetingChat.messageList.last().id)
     greetingChat.addMessage("Hiee", "Hopper")
+}
+
+var id = 1
+fun generateId(): Int {
+    return ++id
 }
 
 open class Chat(
@@ -22,14 +31,12 @@ open class Chat(
     }
 
     fun addThreadMessage(parentid: Int, userName: String, text: String) {
-        val newThreadMessage =ChildMessage(parentid, id=generateId(), text, userName)
+        val newThreadMessage = ChildMessage(parentid, id = generateId(), text, userName)
         println("создана ветка для обсуждения")
         messageList.add(newThreadMessage)
     }
 
-    fun generateId(): Int {
-        return Random.nextInt(1..100)
-    }
+
     fun printChat() {
         messageList.forEach { println(it) }
     }
@@ -51,8 +58,9 @@ class ChildMessage(
     id: Int,
     text: String,
     userName: String
-) : Message(id, text, userName){
+) : Message(id, text, userName) {
     override fun toString(): String {
         return "\t[${this.id}] ${this.userName}: ${this.text}"
-    }}
+    }
+}
 
