@@ -9,23 +9,24 @@ fun main() {
 }
 
 open class SkyObjects(
-    val isAutmosphere: Boolean,
+    val isAtmosphere: Boolean,
     val isSafeForLanding: Boolean
 )
+
 class Planet(
     val name: String,
-    isAutmosphere: Boolean,
+    isAtmosphere: Boolean,
     isSafeForLanding: Boolean,
     val satellites: List<Satellite> = listOf<Satellite>(),
-) : SkyObjects(isAutmosphere, isSafeForLanding) {
-    fun showSatellites() {
-        println("Спутники:")
-        satellites.forEach { println(it.name) }
+) : SkyObjects(isAtmosphere, isSafeForLanding) {
+    fun showSatellites(): String {
+        return "Спутники: ${satellites.joinToString(", ") { it.name }}"
     }
+
 }
 
 class Satellite(
     val name: String,
-    isAutmosphere: Boolean,
+    isAtmosphere: Boolean,
     isSafeForLanding: Boolean
-) : SkyObjects(isAutmosphere, isSafeForLanding)
+) : SkyObjects(isAtmosphere, isSafeForLanding)
