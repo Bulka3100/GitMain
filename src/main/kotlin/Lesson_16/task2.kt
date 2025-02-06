@@ -17,6 +17,5 @@ class Circle(
         return P * radius * radius
     }
 }
-
 private const val P = 3.14
 
