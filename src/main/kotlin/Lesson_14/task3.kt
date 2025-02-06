@@ -6,7 +6,7 @@ fun main() {
     val rectangle2 = Rectangle(7, 42, "White")
     val circus2 = Circus(5, "White")
     val figureList = listOf<Figure>(circus2, circus1, rectangle2, rectangle1)
-    for (figure in figureList){
+    for (figure in figureList) {
         println(figure.javaClass.simpleName)
     }
     var whiteSum = 0
@@ -57,4 +57,4 @@ class Circus(
     }
 }
 
-const val P = 3 //А как быть если бы я принял 3.14? функция же возвращает Int? Какой самый быстрый путь решения?
+const val P = 3
