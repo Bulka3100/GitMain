@@ -9,7 +9,7 @@ fun main() {
 }
 
 class Package(id: Int, currentPlace: String, counter: Int) {
-    val id: Int = id //нормально ли так инициализировать свойства в двух местах если хочу геттер вписать? Может надо назвать иначе или создать
+    val id: Int = id
     var currentPlace = currentPlace
         set(value) {
             counter += 1
