@@ -1,9 +1,7 @@
 package org.example.Lesson_19
 
 fun main() {
-    println(Fish.values())
     for(i in Fish.values()){(findFish(i))}
-
 
 }
 enum class Fish{
@@ -17,7 +15,7 @@ fun findFish(fish: Fish){
         Fish.GUPPY -> println("guppy")
         Fish.ANGELFISH -> println("angelfish")
         Fish.GOLDFISH -> println("goldfish")
-        Fish.SIAMESE_FIGHTING_FISH -> println()
+        Fish.SIAMESE_FIGHTING_FISH -> println("fighting fish")
     }
 
 }
