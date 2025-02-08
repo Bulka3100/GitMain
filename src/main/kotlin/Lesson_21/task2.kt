@@ -6,5 +6,5 @@ fun main() {
 }
 
 fun List<Int>.evenNumbersSum(): Int {
-    return filter { it % 2 == 0 }.sum() //this.filter { it % 2 == 0 } эквивалентно
+    return filter { it % 2 == 0 }.sum()
 }
