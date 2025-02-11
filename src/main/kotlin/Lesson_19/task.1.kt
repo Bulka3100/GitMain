@@ -10,6 +10,7 @@ enum class Fish{
     GOLDFISH,
     SIAMESE_FIGHTING_FISH,
 }
+
 fun findFish(fish: Fish){
     when(fish){
         Fish.GUPPY -> println("guppy")
