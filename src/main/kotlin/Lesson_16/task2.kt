@@ -2,18 +2,18 @@ package org.example.Lesson_16
 
 fun main() {
     val circle = Circle(4)
-    println(Circle(2).calcP())
-    println(circle.calcS())
+    println(Circle(2).calcPerimeter())
+    println(circle.calcArea())
 }
 
 class Circle(
     private val radius: Int
 ) {
-    fun calcP(): Double {
+    fun calcPerimeter(): Double {
         return P * 2 * radius
     }
 
-    fun calcS(): Double {
+    fun calcArea(): Double {
         return P * radius * radius
     }
 }
