@@ -19,12 +19,14 @@ class InternetOrder(
     fun showStatus() {
         println(status)
     }
-    fun returnId(): Int{
+
+    fun returnId(): Int {
         return id
     }
-fun sendRequest(newStatus: Boolean){
-    changeStatus(newStatus)
-}
+
+    fun sendRequest(newStatus: Boolean) {
+        changeStatus(newStatus)
+    }
 }
 
 
