@@ -11,7 +11,7 @@ fun main() {
 }
 
 class Tank(
-    var ammo: Ammo = Ammo.NO_AMMO
+    var ammo: Ammo? = null
 ) {
     fun getNewAmmmo(newAmmo: Ammo) {
         ammo = newAmmo
@@ -37,5 +37,4 @@ enum class Ammo {
     BLUE,
     GREEN,
     RED,
-    NO_AMMO,
 }
