@@ -10,32 +10,9 @@ fun main() {
     fish.toSwim()
 }
 
-class Fish() : Swim {
-    override fun toSwim() {
-        println("Рыба:")
-        super.toSwim()
-    }
-}
-
-class Duck() : Swim, Fly {
-    override fun toFly() {
-        println("Утка:")
-        super.toFly()
-    }
-
-    override fun toSwim() {
-        println("Утка:")
-        super.toSwim()
-    }
-}
-
-class Seagull() : Fly {
-    override fun toFly() {
-        println("Чайка:")
-        super.toFly()
-    }
-}
-
+class Fish() : Swim
+class Duck() : Swim, Fly
+class Seagull() : Fly
 
 interface Fly {
     fun toFly() {
