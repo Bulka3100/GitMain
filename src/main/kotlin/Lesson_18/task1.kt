@@ -10,7 +10,6 @@ fun main() {
 
 class Order(
     val id: Int,
-
     ) {
     fun printOrderInfo(item: String) {
         println("Заказан товар: $item")
