@@ -3,9 +3,8 @@ package org.example.Lesson_16
 fun main() {
     val player = Player("Hero", 10, 5, false)
     player.getDamage()
-    player.getDamage()
     player.heal()
-    player.getDamage()
+    player.heal()
     player.getDamage()
     player.getDamage()
     player.getDamage()
@@ -27,25 +26,31 @@ class Player(
 
     fun heal() {
         if (hp > 0 && hp < maxHeal) {
-            val initialHp = hp
             hp += healValue
+            if (hp > maxHeal) {
+                hp = maxHeal
+            }
             println("${name}: лечение hp=$hp")
-        } else return
-        println("лечение невозможно")
+        } else
+            println("лечение невозможно")
     }
 
     fun getDamage() {
         if (isDead == false) {
             hp -= atackValue
-            println("${name}: получен урон hp=$hp")
             if (hp <= 0) {
+                hp = 0
+                println("${name}: получен урон hp=$hp")
                 dead()
-            } else println("герой мертв!")
+            } else {
+                println("${name}: получен урон hp=$hp")
+            }
+        } else {
+            println("герой $name мертв!")
         }
     }
 
     private fun dead() {
-        println("${name}: умер")
         punchPower = 0
         isDead = true
 
