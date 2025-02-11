@@ -6,25 +6,9 @@ fun main() {
 }
 
 enum class Category() {
-    CLOTHES {
-        override fun getDescription(): String {
-            return "Одежда любых размеров"
-        }
-
-    },
-    DIFFERENT {
-        override fun getDescription(): String {
-            return "От книг до товаров для дома"
-        }
-    },
-    CHANCELLERY {
-        override fun getDescription(): String {
-            return "пишущие принадлежности"
-        }
-    };
-
-    abstract fun getDescription(): String
-
+    CLOTHES,
+    DIFFERENT,
+    CHANCELLERY
 }
 
 class Product(
@@ -33,6 +17,14 @@ class Product(
     val category: Category
 ) {
     fun getInfo() {
-        println("название $name, айди $id, категория ${category.getDescription()}")
+        println("название $name, айди $id, категория ${getDescription(category)}")
+    }
+}
+
+fun getDescription(category: Category): String {
+    when (category) {
+        Category.CLOTHES -> return "Одежда любых размеров"
+        Category.DIFFERENT -> return "От книг до товаров для дома"
+        Category.CHANCELLERY -> return "пишущие принадлежности"
     }
 }
