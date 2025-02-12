@@ -1,8 +1,6 @@
 package org.example.Lesson_21
 
 fun main() {
-    // не совсем понял как что хранить
-    // не понял почему интерфейс, это же просто тип
     println(skillsMap.maxCategory())
 }
 
@@ -21,9 +19,8 @@ val skillsMap = mapOf<String, Int>(
 
     )
 
-fun Map<String, Int>.maxCategory(): String  {
-    return entries.maxBy { it.value }.key
+fun Map<String, Int>.maxCategory(): String?  {
+    return entries.maxByOrNull { it.value }?.key
 }
 
-//не понял как написать  для общих типов Map<K,V>
 
