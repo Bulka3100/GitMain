@@ -7,5 +7,5 @@ fun main() {
 
 fun String.vowel(string: String): Int {
     val vowels = listOf<Char>('a', 'e', 'i', 'o')
-    return string.count { it in vowels }
+    return this.count { it in vowels }
 }
