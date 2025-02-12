@@ -15,6 +15,5 @@ class Player(
 )
 
 fun Player.isHealthy(): Boolean {
-    if (this.currentHp == this.maxHP) return true else return false
-
+   return this.currentHp == this.maxHP
 }
