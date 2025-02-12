@@ -2,7 +2,7 @@ package org.example.Lesson_19
 
 fun main(){
     val humanList= mutableListOf<Human>()
-    for (i in 1..2){
+    for (i in 1..5){
     println("Добро пожаловать пользователь. Вбей сначала имя, затем пол")
     val name= readln()
 
