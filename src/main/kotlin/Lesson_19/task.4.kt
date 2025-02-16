@@ -19,22 +19,17 @@ class Tank(
 
     fun shoot() {
         when (ammo) {
-            Ammo.BLUE -> println("нанесено $blueDamage урона")
-            Ammo.GREEN -> println("нанесено $greenDamage урона")
-            Ammo.RED -> println("нанесено $redDamage урона")
+            Ammo.BLUE -> println("нанесено  ${Ammo.BLUE.damage} урона")
+            Ammo.GREEN -> println("нанесено ${Ammo.GREEN.damage} урона")
+            Ammo.RED -> println("нанесено ${Ammo.RED.damage} урона")
             else -> "нет патронов"
         }
-    }
 
-    companion object {
-        val blueDamage = 5
-        val redDamage = 20
-        val greenDamage = 10
     }
 }
 
-enum class Ammo {
-    BLUE,
-    GREEN,
-    RED,
+enum class Ammo(val damage: Int) {
+    BLUE(5),
+    GREEN(10),
+    RED(20),
 }
