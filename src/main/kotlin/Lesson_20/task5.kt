@@ -5,58 +5,40 @@ import kotlin.String
 fun main() {
 val robotV1= Robot()
     robotV1.say()
-    robotV1.setModifier(SpeechStyle.POLITE)
+    robotV1.setModifier({it.reversed()})
     robotV1.say()
-    robotV1.setModifier(SpeechStyle.ANGRY)
+    robotV1.setModifier({it.uppercase()})
     robotV1.say()
-    robotV1.setModifier(SpeechStyle.NORMAL)
-    robotV1.say()
+    robotV1.setModifier({"Мисье,$it"})
+        robotV1.say()
 
 }
 
 class Robot(
-    private var currentPhrase: String =phraseList.random()
+    private var modifier: (String) -> String = { it }
     ) {
     init {
         println("создан прототип робота")
     }
 
     fun say() {
-        println(currentPhrase)
+        val randomPhrase =(phraseList.random())
+        val finalPhrase = modifier(randomPhrase)
+        println(finalPhrase)
     }
 
-    fun setModifier( style: SpeechStyle) {
-        val basePhrase=phraseList.random()
-        when (style){
-            SpeechStyle.POLITE -> currentPhrase=forPolite+basePhrase
-            SpeechStyle.ANGRY -> currentPhrase=forAngey+basePhrase
-            SpeechStyle.NORMAL -> currentPhrase=basePhrase
-            else -> println("error")
+    fun setModifier( modifier: (String) -> String ) {
+        this.modifier = modifier
+
         }
 
-    }
+
 
     companion object {
-        val forPolite = "Мисье,"
-        val forAngey = "Негодяй,"
-        val forNormal = ""
         val phraseList = listOf<String>(
             "Доброе утро",
             "Добрый день",
             "здравствуйте",
             "чем вам помочь?"
         )
-    }
-    /*private fun getRandomElement(list: List<*>) { // * Нормальный орбщий элеммент или Т использовать? Пишет по-разному
-        val size = list.size
-        val randomIndex = Random.nextInt(0, size - 1)
-        val randomListElement = list[randomIndex]
-        return randomListElement
-    } в итоге это оказалось не нужно, но все равно интересно*/
-}
-
-enum class SpeechStyle {
-    POLITE,
-    ANGRY,
-    NORMAL,
-}
+    }}
