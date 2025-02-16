@@ -11,7 +11,6 @@ fun main() {
 
 }
 
-
 class Forum(
     val memberList: MutableList<ForumUser> = mutableListOf<ForumUser>(),
     val messageList: MutableList<ForumMessage> = mutableListOf<ForumMessage>(),
