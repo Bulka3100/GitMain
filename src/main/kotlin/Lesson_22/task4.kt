@@ -8,15 +8,18 @@ fun main() {
 class MainScreenViewModel {
     data class MainScreenState(var data: String? = null, val isLoading: Boolean = false)
 
-    var mainScreenState: MainScreenState = MainScreenState()
+    private var _mainScreenState = MainScreenState()
+    val mainScreenState: MainScreenState
+        get() = _mainScreenState
+
     fun loadData() {
-        mainScreenState = mainScreenState.copy(data = State.NONE.data, isLoading = false)
+        _mainScreenState = mainScreenState.copy(data = State.NONE.data, isLoading = false)
         println("текущее состояние $mainScreenState")
         Thread.sleep(3000)
-        mainScreenState = mainScreenState.copy(data = State.LOAD.data, isLoading = true)
+        _mainScreenState = mainScreenState.copy(data = State.LOAD.data, isLoading = true)
         println("текущее состояние $mainScreenState")
         Thread.sleep(3000)
-        mainScreenState = mainScreenState.copy(data = State.ISDATA.data, isLoading = false)
+        _mainScreenState = mainScreenState.copy(data = State.ISDATA.data, isLoading = false)
         println("текущее состояние $mainScreenState")
         println("данные загружены")
 
