@@ -6,11 +6,10 @@ import java.time.LocalDateTime
 fun main() {
     val data = LocalDateTime.of(2023, 10, 15, 12, 0)
     val alpha_Centauri = GalacticGuide("Alpha Centauri", "Planet for living", data, 2000)
-    val (name, description, time, long) = alpha_Centauri
-    println(name)
-    println(description)
-    println(time)
-    println(long)
+    println("описание: ${alpha_Centauri.component2()}")
+    println("описание: ${alpha_Centauri.component3()}")
+    println("описание: ${alpha_Centauri.component4()}")
+    println("описание: ${alpha_Centauri.component1()}")
     // если только о месте то можно использовать _
 }
 
