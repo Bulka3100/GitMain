@@ -3,23 +3,31 @@ package org.example.Lesson_22
 fun main() {
 
 }
+
 class MainScreenViewModel(
     val mainScreenState: MainScreenState
 ) {
-    init {
-        if(mainScreenState.isLoading==true)
+     class MainScreenState(data: String,isLoading: Boolean){
+        val data: String = data
+            set(value){
+                field=value
+            }
+        var isLoading: Boolean = isLoading
     }
-    data class MainScreenState(
-        var data: String,
-        var isLoading: Boolean = false
+
+
+
+    fun loadData(state: State) {
+        when(state){
+
+    }}
+
+
+    data class State(
+        val noneData: String = "- отсутствие данных",
+        val loadData: String = "- загрузка данных;",
+        val isData: String = "- наличие загруженных данных.",
     )
-    fun loadData(){
-mainScreenState.data =noneData
+
     }
-    companion object{
-        val noneData="- отсутствие данных;"
-        val loadData="- загрузка данных;"
-        val isData= "- наличие загруженных данных."
-    }
-}
-//TODO понять логику
+
